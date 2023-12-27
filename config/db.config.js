@@ -3,10 +3,7 @@ const config = require('./config');
 
 const dbConnect = async () => {
     try {
-        await mongoose.connect(config.database.db_url, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+        await mongoose.connect(config.database.db_url);
         console.log("database connect successfully...");
     } catch (error) {
         console.log(error);
@@ -14,4 +11,4 @@ const dbConnect = async () => {
 }
 
 
-module.exports = {dbConnect};
+module.exports = { dbConnect };

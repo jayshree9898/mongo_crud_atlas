@@ -10,6 +10,10 @@ db.dbConnect();
 app.use(express.json());
 
 
+//router
+const userRouter = require('./routes/user.routes');
+app.use('/api/v1', userRouter)
+
 let server;
 
 if (config.protocol == "https") {

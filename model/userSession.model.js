@@ -10,10 +10,12 @@ const userSessionSchema = mongoose.Schema({
         required: true
     }, created_At: {
         type: Date,
+        default: Date.now,
         required: true
     },
     updated_At: {
         type: Date,
+        default: Date.now,
         required: true
     },
     deleted_At: {
@@ -24,5 +26,5 @@ const userSessionSchema = mongoose.Schema({
     timestamp: { created_At: "created_at", updated_At: 'updated_at', deleted_At: 'deleted_at' }
 });
 
-const userSession = mongoose.model('userSessions',userSessionSchema);
+const userSession = mongoose.model('userSessions', userSessionSchema);
 module.exports = userSession

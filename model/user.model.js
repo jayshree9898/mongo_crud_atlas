@@ -22,10 +22,12 @@ const userSchema = mongoose.Schema({
     },
     created_At: {
         type: Date,
+        default: Date.now,
         required: true
     },
     updated_At: {
         type: Date,
+        default: Date.now,
         required: true
     },
     deleted_At: {
